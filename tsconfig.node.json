@@ -20,5 +20,5 @@
     "noUnusedParameters": true, // Marca parámetros no utilizados como error
     "noFallthroughCasesInSwitch": true // Evita casos de "fallthrough" en switch
   },
-  "include": ["vite.config.ts"] // Incluye solo el archivo vite.config.ts
+  "include": ["src", "vite.config.ts"] // Incluye los archivos en la carpeta `src` y `vite.config.ts`
 }

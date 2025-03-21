@@ -2,15 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
-import Home from '../pages/Home';
-import ProductDetail from '../pages/ProductDetail';
-import Cart from '../pages/Cart';
+import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
 
-// Verifica que el elemento root no sea null
+// Obtener el elemento root del DOM
 const rootElement = document.getElementById('root');
 
+// Verificar si el elemento root existe
 if (rootElement) {
+  // Crear un root de ReactDOM
   const root = ReactDOM.createRoot(rootElement);
+
+  // Renderizar la aplicación
   root.render(
     <React.StrictMode>
       <Router>
@@ -25,5 +29,5 @@ if (rootElement) {
     </React.StrictMode>
   );
 } else {
-  console.error('Root element not found');
+  console.error('No se encontró el elemento root');
 }
