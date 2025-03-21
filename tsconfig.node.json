@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "incremental": true, // Habilita la compilación incremental
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // Ruta del archivo de información de compilación
+    "target": "ES2022", // Especifica la versión de ECMAScript
+    "lib": ["ES2023"], // Bibliotecas estándar incluidas
+    "module": "ESNext", // Usa módulos de ECMAScript
+    "skipLibCheck": true, // Omite la verificación de tipos en archivos de declaración
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "moduleResolution": "bundler", // Resolución de módulos para bundlers modernos
+    "allowImportingTsExtensions": true, // Permite importar archivos con extensiones .ts/.tsx
+    "isolatedModules": true, // Trata cada archivo como un módulo independiente
+    "moduleDetection": "force", // Fuerza la detección de módulos
+    "noEmit": true, // No genera archivos de salida (útil para desarrollo con Vite)
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": true, // Habilita todas las opciones de verificación estricta
+    "noUnusedLocals": true, // Marca variables locales no utilizadas como error
+    "noUnusedParameters": true, // Marca parámetros no utilizados como error
+    "noFallthroughCasesInSwitch": true // Evita casos de "fallthrough" en switch
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"] // Incluye solo el archivo vite.config.ts
 }

@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "incremental": true, // Habilita la compilación incremental
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // Ruta del archivo de información de compilación
+    "target": "ES2020", // Especifica la versión de ECMAScript
+    "useDefineForClassFields": true, // Habilita el uso de `define` para campos de clase
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Bibliotecas estándar incluidas
+    "module": "ESNext", // Usa módulos de ECMAScript
+    "skipLibCheck": true, // Omite la verificación de tipos en archivos de declaración
+    "moduleResolution": "bundler", // Resolución de módulos para bundlers modernos
+    "allowImportingTsExtensions": true, // Permite importar archivos con extensiones .ts/.tsx
+    "isolatedModules": true, // Trata cada archivo como un módulo independiente
+    "moduleDetection": "force", // Fuerza la detección de módulos
+    "noEmit": true, // No genera archivos de salida (útil para desarrollo con Vite)
+    "jsx": "react-jsx", // Habilita JSX para React
+    "strict": true, // Habilita todas las opciones de verificación estricta
+    "noUnusedLocals": true, // Marca variables locales no utilizadas como error
+    "noUnusedParameters": true, // Marca parámetros no utilizados como error
+    "noFallthroughCasesInSwitch": true, // Evita casos de "fallthrough" en switch
+    "esModuleInterop": true, // Permite la interoperabilidad entre módulos CommonJS y ES
+    "forceConsistentCasingInFileNames": true // Fuerza el uso consistente de mayúsculas/minúsculas en nombres de archivos
   },
-  "include": ["src"]
+  "include": ["src"], // Incluye solo los archivos en la carpeta `src`
+  "exclude": ["node_modules", "dist"] // Excluye estas carpetas de la compilación
 }
